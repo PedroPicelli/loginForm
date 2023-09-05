@@ -1,0 +1,275 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-blue: #A6C4FA;
+    --blue: #5A92FB;
+    --dark-blue: #2C477A;
+    --light-gray: #839BC7;
+    --gray: #515F7A;
+    font-size: 1.5vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(45deg, var(--dark-blue), var(--light-blue));
+    overflow: hidden;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    height: 80vh;
+    max-width: 50vh;
+    width: 50vw;
+    padding: 3%;
+    border-radius: 15px;
+    border: 1px solid var(--dark-blue);
+    box-shadow: 3px 3px 6px 2px #0000004f;
+    transform-style: preserve-3d;
+    transition: 1s linear;
+}
+
+h1 {
+    font-family: MuseoModerno;
+    font-size: 2.5rem;
+    margin-bottom: 25%;
+}
+
+div.labels {
+    position: relative;
+    width: 100%;
+    height: 1px;
+}
+
+div.labels > label {
+    position: absolute;
+    font-family: MuseoModerno;
+    bottom: calc(5 / 100 * 60vh - 1rem / 2);
+    left: 15px;
+    cursor: text;
+}
+
+#login input[type=text], #login input[type=password] {
+    background-color: var(--light-blue);
+    border: 2px solid var(--dark-blue);
+    outline: none;
+    font-family: MuseoModerno;
+    padding-left: 15px;
+    font-size: 1.10em;
+    letter-spacing: 1px;
+    height: 5%;
+    width: 100%;
+    margin: 1.55vh 0;
+    border-radius: 10px;
+}
+
+#login > input[type=button] {
+    background-color: var(--dark-blue);
+    border: none;
+    font-family: MuseoModerno;
+    color: #839BC7;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 5%;
+    margin-top: 5vh;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#login p {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: MuseoModerno;
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    cursor: pointer;
+    margin-top: 8vh;
+}
+
+#login p:hover {
+    text-decoration: underline;
+}
+
+
+/* Cadrastrar */
+
+div#cadastro {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    height: 80vh;
+    max-width: 50vh;
+    width: 50vw;
+    padding: 3%;
+    border-radius: 15px;
+    border: 1px solid var(--dark-blue);
+    box-shadow: 3px 3px 6px 2px #0000004f;
+    transform-style: preserve-3d;
+    transform: rotateY(-90deg);
+    transition: 1s linear;
+}
+
+div.labels {
+    position: relative;
+    width: 100%;
+    height: 1px;
+}
+
+div.labels > label {
+    position: absolute;
+    font-family: MuseoModerno;
+    bottom: calc(5 / 100 * 60vh - 1rem / 2);
+    left: 15px;
+    cursor: text;
+}
+
+#cadastro input[type=text], #cadastro input[type=email], #cadastro input[type=password] {
+    background-color: var(--light-blue);
+    border: 2px solid var(--dark-blue);
+    outline: none;
+    font-family: MuseoModerno;
+    padding-left: 15px;
+    font-size: 1.10em;
+    letter-spacing: 1px;
+    height: 5%;
+    width: 100%;
+    margin: 1.55vh 0;
+    border-radius: 10px;
+}
+
+#cadastro > input[type=button] {
+    background-color: var(--dark-blue);
+    border: none;
+    font-family: MuseoModerno;
+    color: #839BC7;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 5%;
+    margin-top: 5vh;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#cadastro p {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: MuseoModerno;
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    cursor: pointer;
+    margin-top: 8vh;
+}
+
+#cadastro p:hover {
+    text-decoration: underline;
+}
+
+#senhaLoginUnlocked, #senhaCadastroUnlocked, #repitaSenhaCadastroUnlocked, #senhaCadastroLocked, #senhaLoginLocked, #repitaSenhaCadastroLocked {
+    font-size: 1.6rem;
+}
+
+#senhaLoginUnlocked, #senhaCadastroUnlocked, #repitaSenhaCadastroUnlocked {
+    display: none;
+}
+
+
+.material-symbols-outlined {
+    position: absolute;
+    bottom: calc(5 / 100 * 60vh - 1rem / 2);
+    right: 2%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 700px) {
+    :root {
+        font-size: 12px;
+    }
+
+    #login, #cadastro {
+        height: 60vh;
+    }
+
+    div.labels > label {
+        bottom: calc(5 / 100 * 55vh - 1rem / 2);
+    }
+
+    .material-symbols-outlined {
+        bottom: calc(5 / 100 * 55vh - 1rem / 2);
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    :root {
+        font-size: 16px;
+    }
+
+    div#cadastro, div#login {
+        height: 100vh;
+        min-height: 100vh;
+        min-width: 100vw;
+        width: 100vw;
+        border: none;
+        border-radius: 0;
+    }
+
+    div.labels > label {
+        bottom: calc(5 / 100 * 70vh - 1rem / 2);
+    }
+
+    .material-symbols-outlined {
+        bottom: calc(5 / 100 * 70vh - 1rem / 2);
+        right: 5%;
+    }
+
+    #cadastro > input[type=button], #login > input[type=button] {
+        height: 7%;
+        font-size: 1.25rem;
+    }
+}
+
+@keyframes inputs-acionados {
+    0% {
+        bottom: calc(5 / 100 * 60vh - 1rem / 2);
+        left: 15px;
+    }
+
+    100% {
+        bottom: calc(5 / 100 * 60vh + 1rem + 10px);
+        left: 0;
+    }
+}
+
+@keyframes inputs-desacionados {
+    0% {
+        bottom: calc(5 / 100 * 60vh + 1rem + 10px);
+        left: 0;
+    }
+
+    100% {
+        bottom: calc(5 / 100 * 60vh - 1rem / 2);
+        left: 15px;
+    }
+}
